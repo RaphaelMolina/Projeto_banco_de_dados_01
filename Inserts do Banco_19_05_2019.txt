@@ -1,0 +1,254 @@
+--
+-- Inserts da tabela `anos`
+--
+
+INSERT INTO `anos` (`ano_id`, `ano_nome`) VALUES
+(1, 2019),
+(2, 2020),
+(3, 2021),
+(4, 2022),
+(5, 2023),
+(6, 2024),
+(7, 2025),
+(8, 2026),
+(9, 2027),
+(10, 2028),
+(11, 2029);
+
+--
+-- Inserts da tabela `campus`
+--
+
+INSERT INTO `campus` (`campus_id`, `campus_nome`, `campus_cnpj`, `campus_email`, `campus_telefone`, `campus_cep`, `campus_logradouro`, `campus_numero`, `campus_bairro`, `campus_cidade`, `campus_estado_sigla`) VALUES
+(1, 'Centro Universitário Modulo ', '50.005.735/0001-86', 'Maria.ribeiro@modulo.edu.br', '(12) 3897-2000', '11662-047', 'Rua Maria D\'Assumpção Carvalho', '1000', 'Martin de Sá', 'Caraguatatuba', 'SP');
+
+--
+-- Inserts da tabela `dias_da_semana`
+--
+
+INSERT INTO `dias_da_semana` (`dia_da_semana_id`, `dia_da_semana_nome`) VALUES
+(1, 'Domingo'),
+(4, 'Quarta'),
+(5, 'Quinta'),
+(7, 'Sábado'),
+(2, 'Segunda'),
+(6, 'Sexta'),
+(3, 'Terça');
+
+--
+-- Inserts da tabela `meses`
+--
+
+INSERT INTO `meses` (`mes_id`, `mes_nome`) VALUES
+(1, 'Janeiro'),
+(2, 'Fevereiro'),
+(3, 'Março'),
+(4, 'Abril'),
+(5, 'Maio'),
+(6, 'Junho'),
+(7, 'Julho'),
+(8, 'Agosto'),
+(9, 'Setembro'),
+(10, 'Outubro'),
+(11, 'Novembro'),
+(12, 'Dezembro');
+
+--
+-- Inserts da tabela `nomes_das_turmas`
+--
+
+INSERT INTO `nomes_das_turmas` (`nome_da_turma_id`, `nome_da_turma_nome`) VALUES
+(1, 'ADS, 1°Semestre / 2019'),
+(2, 'ADS, 2°Semestre / 2019'),
+(3, 'ADS, 3°Semestre / 2019'),
+(4, 'ADS, 4°Semestre / 2019');
+
+--
+-- Inserts da tabela `nomes_dos_semestres`
+--
+
+INSERT INTO `nomes_dos_semestres` (`nome_do_semestre_id`, `nome_do_semestre_nome`) VALUES
+(1, '1° Semestre'),
+(2, '2° Semestre'),
+(3, '3° Semestre'),
+(4, '4° Semestre'),
+(5, '5° Semestre'),
+(6, '6° Semestre'),
+(7, '7° Semestre'),
+(8, '8° Semestre'),
+(9, '9° Semestre'),
+(10, '10° Semestre');
+
+--
+-- Inserts da tabela `parametros_notas`
+--
+
+INSERT INTO `parametros_notas` (`parametro_nota_id`, `parametro_nota_nome`, `parametro_nota_descricao`, `parametro_nota_valor_maximo`) VALUES
+(1, 'A1', 'A1 - 5 pontos, sendo:\r\nAvaliação Regimental: 3 pontos\r\nProjeto Integrado: 2 pontos\r\n', 5),
+(2, 'A2', 'A2 - 5 pontos, sendo:\r\nAvaliação Intermediária: 2 pontos\r\nAtividades/Exercícios: 3 pontos (incluso a autoavaliação)', 5),
+(3, 'AF', 'Para o aluno que não atingir a NF(Nota Final) igual ou superior a 6 pontos, neste caso substitui a menor nota.', 0);
+
+--
+-- Inserts da tabela `periodos`
+--
+
+INSERT INTO `periodos` (`periodo_id`, `periodo_nome`, `periodo_hora_inicio`, `periodo_hora_termino`) VALUES
+(1, '1° Período', '08:00:00', '08:50:00'),
+(2, '2° Período', '08:50:00', '09:40:00'),
+(3, '3° Período', '09:50:00', '10:40:00'),
+(4, '4° Período', '10:40:00', '11:30:00'),
+(5, '5° Período', '19:00:00', '19:50:00'),
+(6, '6° Período', '19:50:00', '20:40:00'),
+(7, '7° Período', '20:50:00', '21:40:00'),
+(8, '8° Período', '21:40:00', '22:30:00');
+
+--
+-- Inserts da tabela `periodos_dos_semestres`
+--
+
+INSERT INTO `periodos_dos_semestres` (`periodo_do_semestre_id`, `periodo_do_semestre_inicio`, `periodo_do_semestre_fim`) VALUES
+(1, '2019-02-04', '2019-06-28'),
+(2, '2019-08-01', '2019-12-20');
+
+--
+-- Inserts da tabela `usuarios`
+--
+INSERT INTO `usuarios` (`usuario_id`, `usuario_nome`, `usuario_senha`) VALUES
+(1, 'João', '1234'),
+(2, 'Lucas', '321'),
+(3, 'Lippi', '123'),
+(4, 'Teixeira', '123'),
+(5, 'Marcio', '123'),
+(6, 'Andre', '123');
+
+--
+-- Inserts da tabela `pessoas`
+--
+
+INSERT INTO `pessoas` (`pessoa_id`, `pessoa_nome`, `pessoa_cpf`, `pessoa_email`) VALUES
+(1, 'Fabio Lippi', '388.852.528-11', 'fabiolippi@gmail.com'),
+(2, 'Antunes Teixeira', '399.442.875-10', 'antunesteixeira@gmail.com'),
+(3, 'João Francisco da Silva', '123.456.789-20', 'joaofrancisco@gmail.com'),
+(4, 'Lucas das Neves', '987.654.321-25', 'lucasdasn@gmail.com'),
+(5, 'Márcio', '123.547.621-41', 'marcio@gmail.com'),
+(6, 'André', '412.871.521-78', 'andre@gmail.com');
+
+--
+-- Inserts da tabela `coordenadores`
+--
+
+INSERT INTO `coordenadores` (`coordenador_id`, `coordenador_matricula`, `coordenador_pessoa_id`, `coordenador_usuario_id`) VALUES
+(1, '123456789', 1, 3),
+(2, '987654321', 2, 4);
+
+--
+-- Inserts da tabela `professores`
+--
+
+INSERT INTO `professores` (`professor_id`, `professor_matricula`, `professor_pessoa_id`, `professor_usuario_id`) VALUES
+(1, '789456123', 6, 6),
+(2, '321654987', 5, 5);
+
+--
+-- Inserts da tabela `alunos`
+--
+
+INSERT INTO `alunos` (`aluno_id`, `aluno_rgm`, `aluno_pessoa_id`, `aluno_usuario_id`) VALUES
+(1, '123456789', 4, 2),
+(2, '987654321', 3, 1);
+
+--
+-- Inserts da tabela `disciplinas`
+--
+
+INSERT INTO `disciplinas` (`disciplina_id`, `disciplina_nome`, `disciplina_codigo`, `disciplina_carga_horaria`, `disciplina_hora_aula`, `disciplina_hora_relogio`)
+VALUES 
+(01, 'Análise e Projeto de Sistemas', '5412', '80:00:00', '01:00:00', '00:50:00'),
+(02, 'Banco de Dados', '5413', '80:00:00', '01:00:00', '00:50:00'),
+(03, 'Engenharia de Software ', '5414', '60:00:00','01:00:00', '00:50:00'),
+(04, 'Fundamentos de Estrutura de Dados', '5415', '60:00:00','01:00:00',  '00:50:00'),
+(05, 'Redes de Computadores', '5416', '60:00:00', '01:00:00' ,'00:50:00'), 
+(06, 'Técnicas de Programação', '5417', '60:00:00', '01:00:00', '00:50:00'); 
+
+--
+-- Inserts da tabela `cursos`
+--
+
+INSERT INTO `cursos`(`curso_id`, `curso_nome`, `curso_codigo`, `curso_carga_horaria`) VALUES 
+(01 ,'Analise e Desenvolvimento de Sistemas ','ADS','2000'),
+(02, 'Engenharia de Produção', 'EP', 3645);
+
+--
+-- Inserts da tabela `semestres`
+--
+
+INSERT INTO `semestres` (`semestre_id`, `semestre_nome_do_semestre_id`, `semestre_periodo_do_semestre_id`, `semestre_ano_id`) VALUES
+(1, 1, 1, 1),
+(2, 2, 2, 1),
+(3, 3, 1, 1),
+(4, 4, 2, 1);
+
+--
+-- Inserts da tabela `turmas`
+--
+
+INSERT INTO `turmas` (`turma_id`, `turma_nome_da_turma_id`, `turma_semestre_id`, `turma_curso_id`, `turma_coordenador_id`, `turma_aluno_id`) VALUES
+(1, 2, 1, 1, 1, 1),
+(2, 1, 3, 2, 2, 2);
+
+--
+-- Inserts da tabela `aulas`
+--
+
+INSERT INTO `aulas` (`aula_id`, `aula_periodo_id`, `aula_dia_da_semana_id`, `aula_disciplina_id`, `aula_turma_id`, `aula_professor_id`) VALUES
+(1, 5, 2, 1, 1, 2),
+(2, 6, 2, 1, 1, 2),
+(3, 7, 3, 2, 2, 1),
+(4, 8, 3, 2, 2, 1);
+
+--
+-- Inserts da tabela `projetos`
+--
+
+INSERT INTO `projetos` (`projeto_id`, `projeto_nome`, `projeto_data_de_entrega`, `projeto_descricao`, `projeto_semestre_id`, `projeto_ano_id`) VALUES
+(1, 'Integrado_1', '2019-05-15', 'Teste_1', 1, 1),
+(2, 'Integrado_2', '2019-05-16', 'Teste_2', 2, 1),
+(3, 'Integrado_3', '2019-05-15', 'Teste_3', 3, 1),
+(4, 'Integrado_4', '2019-05-15', 'Teste_4', 4, 1);
+
+--
+-- Inserts da tabela `disciplinas_dos_projetos`
+--
+
+INSERT INTO `disciplinas_dos_projetos` (`disciplina_do_projeto_id`, `disciplina_do_projeto_projeto_id`, `disciplina_do_projeto_disciplina_id`) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 1),
+(4, 4, 2);
+
+--
+-- Inserts da tabela `integrantes_dos_projetos`
+--
+
+INSERT INTO `integrantes_dos_projetos` (`integrante_do_projeto_id`, `integrante_do_projeto_projeto_id`, `integrante_do_projeto_aluno_id`) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 1),
+(4, 4, 2);
+
+--
+-- Inserts da tabela `anexos`
+--
+
+INSERT INTO `anexos` (`anexo_id`, `anexo_nome`, `anexo_projeto_id`) VALUES
+(1, 'Arquivo_1.txt', 1),
+(2, 'Arquivo_2.txt', 2),
+(3, 'Arquivo_2.txt', 3),
+(4, 'Arquivo_3.txt', 4);
+
+--
+-- Inserts da tabela `eventos`
+--
+
+INSERT INTO `eventos` (`evento_id`, `evento_title`, `evento_body`, `evento_url`, `evento_class`, `evento_start`, `evento_end`, `evento_inicio_normal`, `evento_final_normal`, `evento_status`) VALUES
+(1, 'Teste Título', 'Teste Descrição', 'http://localhost/Calendario/descripcion_evento.php?id=1', 'event-info', '1556219580000', '1556392380000', '25/04/2019 14:13', '27/04/2019 14:13', 1);

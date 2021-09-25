@@ -1,0 +1,14 @@
+SELECT DISTINCT
+
+repositorio_de_ideia_titulo AS Título,
+repositorio_de_ideia_nome AS "Nome do Idealizador",
+repositorio_de_ideia_email AS "e-mail do Idealizador",
+repositorio_de_ideia_descricao AS Ideia,
+repositorio_de_ideia_data AS "Data da ideia",
+anexo_repositorio_de_ideia_nome AS Anexos
+FROM repositorios_de_ideias
+
+LEFT JOIN anexos_repositorios_de_ideias
+ON (repositorios_de_ideias.repositorio_de_ideia_id = anexos_repositorios_de_ideias.anexo_repositorio_de_ideia_repositorio_de_ideia_id)
+
+WHERE repositorio_de_ideia_usuario_id = 1;

@@ -1,0 +1,149 @@
+--
+-- SELECT dos Projetos através do ID do Coordenador.
+-- Vai trazer todos os projestos onde o Coordenador e o integrante estejam relacionados na tebela turmas.
+-- 
+
+SELECT DISTINCT
+projeto_nome AS "Nome do Projeto",
+projeto_data_de_entrega AS "Data de entrega",
+projeto_descricao As Descrição,
+aluno_rgm AS RGM,
+pessoa_nome AS Alunos,
+nome_do_semestre_nome AS Semestre,
+ano_nome AS Ano, 
+disciplina_nome AS Disciplinas,
+anexo_nome AS Anexos
+
+FROM projetos
+
+LEFT JOIN integrantes_dos_projetos
+ON (projetos.projeto_id = integrantes_dos_projetos.integrante_do_projeto_projeto_id)
+
+LEFT JOIN alunos
+ON (integrantes_dos_projetos.integrante_do_projeto_aluno_id = alunos.aluno_id)
+
+LEFT JOIN pessoas
+ON (alunos.aluno_pessoa_id = pessoas.pessoa_id)
+
+LEFT JOIN semestres 
+ON (projetos.projeto_semestre_id = semestres.semestre_id)
+
+LEFT JOIN nomes_dos_semestres
+ON (semestres.semestre_nome_do_semestre_id = nomes_dos_semestres.nome_do_semestre_id)
+
+LEFT JOIN anos
+ON (projetos.projeto_ano_id = anos.ano_id)
+
+LEFT JOIN disciplinas_dos_projetos
+ON (disciplinas_dos_projetos.disciplina_do_projeto_projeto_id = projetos.projeto_id)
+
+LEFT JOIN disciplinas
+ON (disciplinas_dos_projetos.disciplina_do_projeto_disciplina_id = disciplinas.disciplina_id)
+
+LEFT JOIN anexos
+ON (projetos.projeto_id = anexos.anexo_projeto_id)
+
+LEFT JOIN turmas
+ON(integrantes_dos_projetos.integrante_do_projeto_aluno_id = turmas.turma_aluno_id)
+
+WHERE turmas.turma_coordenador_id = 1;
+
+-- 
+-- SELECT dos Projetos através do ID do Professor.
+-- Vai trazer todos os projestos onde o Professor e a Disciplina estejam relacionados na tabela aulas.
+-- 
+
+
+SELECT DISTINCT
+
+projeto_nome AS "Nome do Projeto",
+projeto_data_de_entrega AS "Data de entrega",
+projeto_descricao As Descrição,
+aluno_rgm AS RGM,
+pessoa_nome AS Alunos,
+nome_do_semestre_nome AS Semestre,
+ano_nome AS Ano, 
+disciplina_nome AS Disciplinas,
+anexo_nome AS Anexos
+
+FROM projetos
+
+LEFT JOIN integrantes_dos_projetos
+ON (projetos.projeto_id = integrantes_dos_projetos.integrante_do_projeto_projeto_id)
+
+LEFT JOIN alunos
+ON (integrantes_dos_projetos.integrante_do_projeto_aluno_id = alunos.aluno_id)
+
+LEFT JOIN pessoas
+ON (alunos.aluno_pessoa_id = pessoas.pessoa_id)
+
+LEFT JOIN semestres 
+ON (projetos.projeto_semestre_id = semestres.semestre_id)
+
+LEFT JOIN nomes_dos_semestres
+ON (semestres.semestre_nome_do_semestre_id = nomes_dos_semestres.nome_do_semestre_id)
+
+LEFT JOIN anos
+ON (projetos.projeto_ano_id = anos.ano_id)
+
+LEFT JOIN anexos
+ON (projetos.projeto_id = anexos.anexo_projeto_id)
+
+LEFT JOIN disciplinas_dos_projetos
+ON (disciplinas_dos_projetos.disciplina_do_projeto_projeto_id = projetos.projeto_id)
+
+LEFT JOIN disciplinas
+ON (disciplinas_dos_projetos.disciplina_do_projeto_disciplina_id = disciplinas.disciplina_id)
+
+LEFT JOIN aulas
+ON(disciplinas_dos_projetos.disciplina_do_projeto_disciplina_id = aulas.aula_disciplina_id)
+
+WHERE aulas.aula_professor_id = 1;
+
+-- 
+-- SELECT dos Projetos através do ID do Aluno.
+-- Vai trazer todos os projestos onde o Aluno e o Projeto estejam relacionados na tabela integrantes_do_projetos.
+-- 
+
+SELECT DISTINCT
+
+projeto_nome AS "Nome do Projeto",
+projeto_data_de_entrega AS "Data de entrega",
+projeto_descricao As Descrição,
+aluno_rgm AS RGM,
+pessoa_nome AS Alunos,
+nome_do_semestre_nome AS Semestre,
+ano_nome AS Ano, 
+disciplina_nome AS Disciplinas,
+anexo_nome AS Anexos
+
+FROM projetos
+
+LEFT JOIN integrantes_dos_projetos
+ON (projetos.projeto_id = integrantes_dos_projetos.integrante_do_projeto_projeto_id)
+
+LEFT JOIN alunos
+ON (integrantes_dos_projetos.integrante_do_projeto_aluno_id = alunos.aluno_id)
+
+LEFT JOIN pessoas
+ON (alunos.aluno_pessoa_id = pessoas.pessoa_id)
+
+LEFT JOIN semestres 
+ON (projetos.projeto_semestre_id = semestres.semestre_id)
+
+LEFT JOIN nomes_dos_semestres
+ON (semestres.semestre_nome_do_semestre_id = nomes_dos_semestres.nome_do_semestre_id)
+
+LEFT JOIN anos
+ON (projetos.projeto_ano_id = anos.ano_id)
+
+LEFT JOIN anexos
+ON (projetos.projeto_id = anexos.anexo_projeto_id)
+
+LEFT JOIN disciplinas_dos_projetos
+ON (disciplinas_dos_projetos.disciplina_do_projeto_projeto_id = projetos.projeto_id)
+
+LEFT JOIN disciplinas
+ON (disciplinas_dos_projetos.disciplina_do_projeto_disciplina_id = disciplinas.disciplina_id)
+
+WHERE integrantes_dos_projetos.integrante_do_projeto_aluno_id = 1;
