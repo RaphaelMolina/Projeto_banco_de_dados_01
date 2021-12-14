@@ -17,3 +17,13 @@ Modelagem lógica:
 ![Modelagem_logica_03](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/Modelagem_logica_03.JPG)
 ![Modelagem_logica_04](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/Modelagem_logica_04.JPG)
 ![Modelagem_logica_05](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/Modelagem_logica_05.JPG)
+
+<br>
+
+SELECT:
+![SELECT_01](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_01.JPG)
+![SELECT_02](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_02.JPG)
+![SELECT_03](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_03.JPG)
+![SELECT_04](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_04.JPG)
+![SELECT_05](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_05.JPG)
+![SELECT_06](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_06.JPG)
