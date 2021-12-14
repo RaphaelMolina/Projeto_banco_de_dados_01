@@ -20,7 +20,7 @@ Modelagem lógica:
 
 <br>
 
-SELECT:
+Select:
 ![SELECT_01](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_01.JPG)
 ![SELECT_02](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_02.JPG)
 ![SELECT_03](https://github.com/RaphaelMolina/Projeto_banco_de_dados_01/blob/main/SELECT_03.JPG)
